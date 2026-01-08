@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestionnaire de tâches</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap5XQ5mHq0a6k6Yv4s2QHhK2s2K3Zq3Vh8c1Y2rGQe0v9s6kR5bQ9D3Y2l1x6s3Z4Y5a6b7c8d9e0f1g2h3==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <h1>Gestionnaire de tâches</h1>
+    <!-- decorative SVG next to title -->
+    <div style="text-align:center; margin-top:0.5rem; margin-bottom:1rem">
+        <svg width="120" height="12" viewBox="0 0 120 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="0" y="2" width="120" height="8" rx="4" fill="url(#g)" opacity="0.9"/>
+            <defs>
+                <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#ff7fb8"/>
+                    <stop offset="100%" stop-color="#b496ff"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+    <!-- contrôle simplifié : uniquement 'Supprimer tout' (les filtres ont été retirés pour simplifier) -->
+    <div class="controls" style="text-align:center; margin-bottom:1.25rem;">
+        <div class="controls-inner" style="display:inline-flex; gap:0.5rem; align-items:center;">
+            <button id="clearAllBtn" class="clear-all">Supprimer tout</button>
+        </div>
+    </div>
+
+    <form id="taskForm">
+        <div>
+            <label for="titre">Titre :</label>
+            <input type="text" id="titre" required>
+        </div>
+        <div>
+            <label for="sousTitre">Sous-titre :</label>
+            <input type="text" id="sousTitre">
+        </div>
+     <div>
+            <label for="message">Message :</label>
+            <textarea id="message" rows="3"></textarea>
+        </div>
+ <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email">
+        </div>
+            <div>
+            <label for="date">Date :</label>
+            <input type="date" id="date">
+        </div>
+        <button type="submit">Ajouter</button>
+    </form>
+
+       <div id="taskList"></div>
+       
+    <!-- Le template a été déplacé dans le fichier JavaScript selon la demande. -->
+    <script src="dom.js"></script>
+</body>
+</html>
+
